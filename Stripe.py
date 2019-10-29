@@ -14,6 +14,30 @@ For example, the input [3, 4, -1, 1] should give 2. The input [1, 2, 0] should g
 You can modify the input array in-place.
 
 """
+Solution Charles
+
+def solution_with_set(l):
+    s, res = set(l), 0
+    while res in s:
+        res += 1
+    return res
+
+def solution_with_dic(l):
+    n = len(l)
+    d = {x: False for x in range(n)}
+    res = 0
+    for val in l:
+        if (0 <= val) and (val < n):
+            d[val] = True
+        if val == res:
+            while res < n and d[res]:
+                res += 1
+    return res
+
+
+
+
+Solution Oscar
 
 import bisect #insert elements to sorted list
 
@@ -38,7 +62,4 @@ def get_first_missing_integer(l) :
 
 print(get_first_missing_integer(l))
 
-
-    
-        
 #    seen.insort(l, 3)
