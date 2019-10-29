@@ -4,6 +4,10 @@
 Created on Tue Oct  8 13:10:38 2019
 
 @author: oscarbarbier
+
+This problem was asked by Google
+
+Given a list l and an integer k, write a function that returns True only if there is two number a,b in l which respect a+b = k
 """
 
 def problem_solver_naif(l, k) :
