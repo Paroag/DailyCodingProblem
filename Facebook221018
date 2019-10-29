@@ -17,6 +17,8 @@ For example, the message '111' would give 3, since it could be decoded as 'aaa',
 You can assume that the messages are decodable. For example, '001' is not allowed.
 """
 
+Solution Oscar
+
 def count_decode (chaine) :
     if len(chaine) == 1 or not chaine :
         return 1

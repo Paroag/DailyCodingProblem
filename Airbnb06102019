@@ -9,3 +9,30 @@ Write an algorithm that finds an appropriate Y array with the following properti
     The absolute pairwise difference between elements is minimized. In other words, |x1- y1| + |x2- y2| + ... + |xn- yn| should be as small as possible.
 
 For example, suppose your input is [1.3, 2.3, 4.4]. In this case you cannot do better than [1, 2, 5], which has an absolute difference of |1.3 - 1| + |2.3 - 2| + |4.4 - 5| = 1.
+
+
+Solution Oscar
+
+X = [1.3, 2.3, 4.4]
+
+def get_L1(X, Y) :
+    diff = [abs(round(x - y, 5)) for (x, y) in zip(X, Y)]
+    return(sum(diff))
+
+def get_Y(X) :
+    Y = [round(val) for val in X]
+    diff = [round(x - y, 5) for (x, y) in zip(X, Y)]
+    
+    while round(sum(X)) != sum(Y) :
+        if sum(Y) < round(sum(X)) :
+            index = diff.index(max(diff))
+            Y[index] += 1
+            diff = [round(x - y, 5) for (x, y) in zip(X, Y)]
+        elif sum(Y) < round(sum(X)) :
+            index = diff.index(min(diff))
+            Y[index] -= 1
+            diff = [round(x - y, 5) for (x, y) in zip(X, Y)]
+    return Y
+
+print(get_L1(X, get_Y(X)))
+print(get_Y(X))
