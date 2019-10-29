@@ -19,6 +19,8 @@ Follow-up: Can you do this in O(N) time and constant space?
 
 """
 
+Solution Oscar
+
 def function(l) :
     def largest_sum(l, dic, key) :
         if key in dic :
