@@ -1,9 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Oct 28 15:46:58 2019
 
-@author: oscarbarbier
 
 This problem was asked by Google.
 
@@ -28,6 +23,7 @@ the minimum number of steps required to reach the end is 7,
 since we would need to go through (1, 2) because there is a wall 
 everywhere else on the second row.
 """
+Solution Oscar
 
 m = [[False, False, False, False], [False, True, False, True], [False, False, False, False], [False, False, False, False]]
 c1 = (3,0)
