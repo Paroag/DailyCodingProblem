@@ -54,3 +54,11 @@ def get_liste(nb_2, N) :
         return(result_1+result_2)
              
 print(probleme(4))
+
+Solution Charles 
+
+def number_of_climbing(n):
+s = [1, 2]
+for i in range(2, n):
+s.append(s[i-2]+s[i-1])
+return s[n-1]
