@@ -48,6 +48,8 @@ The name of a file contains at least a period and an extension.
 The name of a directory or sub-directory will not contain a period.
 """
 
+'''Solution Oscar'''
+
 class Pile():
     
     def __init__(self):
