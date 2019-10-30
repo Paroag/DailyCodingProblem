@@ -15,19 +15,19 @@ For the diagram above, for example, this would be six, representing the 2 x 3 ar
 
 def min_and_index(l):
   if not l:
-  raise("Empty list")
- m, i = l[0], 0
- for k in range(len(l)):
- if l[k]<m:
- m, i = l[k], k
- return (m, i)
+   raise("Empty list")
+  m, i = l[0], 0
+  for k in range(len(l)):
+   if l[k]<m:
+    m, i = l[k], k
+  return (m, i)
 
 def get_area_max(l):
  n = len(l)
  if n == 0:
- return -1
+  return -1
  if n == 1:
- return l[0]
+  return l[0]
  else:
- (m, k) = min_and_index(l)
+  (m, k) = min_and_index(l)
  return max(get_area_max(l[:k]), n*m, get_area_max(l[(k+1):]))
