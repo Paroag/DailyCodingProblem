@@ -36,6 +36,47 @@ def count_decode (chaine) :
             return(count_decode(chaine[2:]))
         else :
             return(count_decode(chaine[1:]) + count_decode(chaine[2:]))
+        
+ 
+Solution Charles
+
+ from functools import reduce
+    def product(a,b):
+    return a * b
+
+def fibo(n):
+    def go(a,b,n):
+        if n == 0:
+            return a
+        else:
+            return go(b,a+b,n-1)
+    return go(1,1,n)
+
+def fb(txt):
+    l, s, ind = [], 0, 0
+    for c in txt:
+        print(c)
+        if c in {'1', '2'}:
+            s += 1
+        else:
+            if c == '0':
+                s -= 1
+            else:
+                if s > 0 and txt[ind - 1] == '1':
+                    s += 1
+                if s > 0 and txt[ind - 1] == '2' and c in {'3', '4', '5', '6'}:
+                    s +=1
+                if s == 0:
+                    s += 1
+            l.append(s)
+            s = 0
+        ind += 1
+        if ind == len(txt) and c in {'1', '2'}:
+            l.append(s)
+    print(l)
+    fibs = [fibo(x) for x in l]
+    print(fibs)
+    return reduce(product, fibs)
             
 
 

@@ -42,3 +42,13 @@ def function(l) :
     result = largest_sum(l, dic, 0)[0]
     return result 
 
+   
+   '''Solution Charles'''
+def max_sum(lints):
+ if lints == [] or lints is None:
+ return 0
+ n, s = len(lints), lints[0:2]
+ s.append(s[0] + lints[2])
+ for ind in range(3, n):
+ s.append(lints[ind] + max(s[ind-3], s[ind-2]))
+ return max(s[n-2], s[n-1])

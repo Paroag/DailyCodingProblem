@@ -18,6 +18,8 @@ You should be as efficient with time and space as possible.
 
 """
 
+'''solution Oscar'''
+
 class fifo() :
     
     def __init__(self):

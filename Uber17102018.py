@@ -16,6 +16,8 @@ For example, if our input was [1, 2, 3, 4, 5], the expected output would be [120
 Follow-up: what if you can't use division?
 """
 
+'''Solution Oscar'''
+
 def problem_solver_ez(liste) :
     c = 1
     for val in liste :

@@ -15,3 +15,50 @@ For example, if N is 4, then there are 5 unique ways:
 
 What if, instead of being able to climb 1 or 2 steps at a time, you could climb any number from a set of positive integers X? 
 For example, if X = {1, 3, 5}, you could climb 1, 3, or 5 steps at a time.
+
+Solution Oscar
+
+import math
+
+def parmi(k, n) :
+    return int(math.factorial(n)/math.factorial(k)/math.factorial(n-k))
+    
+def probleme(N) :
+    somme = 0
+    l = []
+    for nb_2 in range(int(N/2)+1) :
+        somme += parmi(nb_2, N-nb_2)
+        l = l + get_liste(nb_2, N-nb_2)
+    return(l)
+    
+def get_liste(nb_2, N) :
+    # retourne toutes les combinaisons de nb_2 2 dans une liste de longueur N
+    if N == 1 :
+        if nb_2 == 0 :
+            return([[1]])
+        elif nb_2 == 1 :
+            return([[2]])
+    elif N > 1 and nb_2 == 0 :
+        smaller = get_liste(nb_2, N-1)
+        result = [([1]+liste) for liste in smaller]
+        return(result)
+    elif N == nb_2 :
+        smaller = get_liste(nb_2-1, N-1)
+        result = [([2]+liste) for liste in smaller]
+        return result
+    elif N > 1 and nb_2 != 0 :
+        smaller = get_liste(nb_2-1, N-1)
+        result_2 = [([2]+liste) for liste in smaller]
+        smaller = get_liste(nb_2, N-1)
+        result_1 = [([1]+liste) for liste in smaller]    
+        return(result_1+result_2)
+             
+print(probleme(4))
+
+Solution Charles 
+
+def number_of_climbing(n):
+s = [1, 2]
+for i in range(2, n):
+s.append(s[i-2]+s[i-1])
+return s[n-1]

@@ -15,6 +15,8 @@ Given an integer k and a string s, find the length of the longest substring that
 For example, given s = "abcba" and k = 2, the longest substring with k distinct characters is "bcb".
 """
 
+'''solution Oscar'''
+
 s = "initation"
 k = 4
 
