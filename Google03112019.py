@@ -9,6 +9,8 @@ For example, the edit distance between “kitten” and “sitting” is three: 
 Given two strings, compute the edit distance between them.
 """
 
+### Solution Oscar (récurrence)
+
 def distance_edit(string1, string2) :
 	if len(string1) < len(string2) :
 		return(distance_edit(string2, string1))
