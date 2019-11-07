@@ -26,8 +26,12 @@ Do not forget that we are trying to develop a generic logo/brand detector. No se
 - Mark the bounding box of the visible area of the object (not the estimated total extent of the object).
 - The bounding box should contain all visible pixels
 -  The bounding box should enclose the object as tight as possible.
-- If there is some text nearby logo and you are wondering if you should include it or not, it is recommended to stick to the logo as the geometrical form (and exclude the text)
+- If there is some text nearby the logo and you are wondering if you should include it or not, it is recommended to stick to the logo as the geometrical form (and exclude the text)
 
+Correct annotation :
+![Correct](./Images/correct.png)
+
+Incorrect annotation :
 ![Correct](./Images/correct.png)
 
 ### Occluded information
@@ -35,6 +39,10 @@ Do not forget that we are trying to develop a generic logo/brand detector. No se
 The logo/brand should be marked as occluded if :
 - The logo/brand is partially cropped
 - The logo/brand is inclined enough (at your discretion)
+
+Occluded logos :
+![Occluded](./Images/occluded.png)
+![Occluded2](./Images/occluded2.png)
 
 ## FAQ
 
