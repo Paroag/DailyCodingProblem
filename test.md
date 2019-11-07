@@ -29,10 +29,10 @@ Do not forget that we are trying to develop a generic logo/brand detector. No se
 - If there is some text nearby the logo and you are wondering if you should include it or not, it is recommended to stick to the logo as the geometrical form (and exclude the text)
 
 Correct annotation :
-![Correct](./Images/correct.png)
+![Correct](./Images/correct_annotation.png)
 
 Incorrect annotation :
-![Correct](./Images/correct.png)
+![Incorrect](./Images/incorrect_annotation.png)
 
 ### Occluded information
 
