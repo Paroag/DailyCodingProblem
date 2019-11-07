@@ -28,7 +28,7 @@ Do not forget that we are trying to develop a generic logo/brand detector. No se
 -  The bounding box should enclose the object as tight as possible.
 - If there is some text nearby logo and you are wondering if you should include it or not, it is recommended to stick to the logo as the geometrical form (and exclude the text)
 
-correct / incorrect
+![Correct](./Images/correct.png)
 
 ### Occluded information
 
